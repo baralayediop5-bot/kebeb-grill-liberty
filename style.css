@@ -187,3 +187,69 @@ footer {
 .hero button:active {
     transform: scale(0.98);
 }
+/* 🍽️ Accueil restaurant */
+.restaurant-badge {
+    font-size: 18px;
+    font-weight: bold;
+    color: #123c9c;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.restaurant-slogan {
+    max-width: 650px;
+    font-size: 20px;
+    margin: 0 auto 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.restaurant-button {
+    display: inline-block;
+    background: #123c9c;
+    color: white;
+    text-decoration: none;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.restaurant-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(18, 60, 156, 0.3);
+}
+
+.restaurant-button.secondary {
+    background: white;
+    color: #123c9c;
+    border: 2px solid #123c9c;
+}
+
+@media (max-width: 600px) {
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .restaurant-slogan {
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .restaurant-button {
+        width: 100%;
+    }
+}
