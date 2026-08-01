@@ -1,178 +1,148 @@
-    text-decoration: none;
-    margin: 15p×;
-    font-weight: bold;
+* {
+box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-}
-
-.hero {
-    text-align: center;
-    padding: 80p× 20p×;
-}
-
-header{
-    background: #0d6efd;
-    color: white;
-    display: flex;
-    justifi-content:
-space-between;
-    align-items: center;
-    padding: 20p×;
-}
-
-nav a{
-    color: white;
-    text-decoration: none;
-    margin: 15p×;
-}
-
-button{
-    background: #0d6efd;
-    color: white;
-    padding: 15p× 30p×;
-    border: none;
-    border-radius: 8p×;
-    cursor: pointer;
-    font-size: 18p×;
-}
-
-button:hover {
-    background: #084298;
-}
-
-section {
-    padding: 50p×;
-    text-align: center;
-}
-
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20p×;
-}
-
-#photo {
-    width: 120p× !important; 
-    height: 120p× !important;  
-    object-fit: cover; 
-    display: block;
-    border-radius: 50%;
-    margin: 20p× auto;
-}
-
-form {
-    max-width: 600p×;
-    margin: 30p× auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15p×;
-}
-
-label {
-    display: black;
-    margin-top: 15p×;
-} 
-
-input, textarea {
-    padding: 10p×;
-    font-size: 16p×;
-}
-
-button {
-    background: #0d6efd;
-    color: white;
-    border: none;
-    padding: 10p×;
-    cursor: pointer;
-}
-
-input, textarea {
-    border: 1p× solid #ccc;
-    border-radius: 8p×;
-    outline: none;
-}
-
-input: focus, textarea: focus {
-    border-color: #0d6efd;
-}
-
-button: hover {
-    background: #084298;
-
-}
-
-#apropos {
-    text-align: center;
-    padding: 50p× 20p×;
-}
-
-#apropos p {
-    max-width: 700p×;
-    margin: 30p× auto;
-    font-size; 18p×;
+    background: #f4f7fb;
+    color: #222;
     line-height: 1.6;
 }
 
-/* Adaptation pour
-telephone */
-@media (max-width: 600p×)
-{
+header {
+    background: #123c9c;
+    color: white;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
 
+header h1 {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav {
+    display: inline-block;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.hero {
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #123c9c;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+button {
+    background: #123c9c;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #0b2d75;
+    transform: scale(1.05);
+}
+
+#photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px;
+    border: 5px solid #123c9c;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 150px;
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Adaptation téléphone */
+@media (max-width: 600px) {
     header {
-        flex-direction: column;
-        padding: 15p×;
+        text-align: center;
+    }
+
+    header h1 {
+        display: block;
+        margin-bottom: 15px;
     }
 
     nav a {
-        margin: 8p×;
+        display: inline-block;
+        margin: 5px;
     }
 
-    .hero {
-        padding: 50p× 15p×;
+    section {
+        padding: 50px 15px;
     }
 
-    #apropos {
-        padding: 30p× 15p×;
+    h2 {
+        font-size: 26px;
     }
 
-    #photo {
-        width: 100p× !important;
-        height: 100p× !mportant; 
-        margin: 20p× auto;
-    }
-
-    form {
-        width: 90%;
-        max-width: none;
-        margin: 20p× auto;
-    }
-
-    input, textarea, button {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    textarea {
-        min-height: 120p×;
-    }
-
-    .hero h1 {
-        font-size: 28p×;
-    }
-
-    .hero p {
-        font-size: 16p×;
-    }
-
-    #apropos p {
-        font-size: 16p×;
-    }
-
-    footer {
-        font-size: 14p×;
+    p {
+        font-size: 16px;
     }
 }
