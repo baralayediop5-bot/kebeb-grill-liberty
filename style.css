@@ -1,0 +1,178 @@
+    text-decoration: none;
+    margin: 15p×;
+    font-weight: bold;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    text-align: center;
+    padding: 80p× 20p×;
+}
+
+header{
+    background: #0d6efd;
+    color: white;
+    display: flex;
+    justifi-content:
+space-between;
+    align-items: center;
+    padding: 20p×;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 15p×;
+}
+
+button{
+    background: #0d6efd;
+    color: white;
+    padding: 15p× 30p×;
+    border: none;
+    border-radius: 8p×;
+    cursor: pointer;
+    font-size: 18p×;
+}
+
+button:hover {
+    background: #084298;
+}
+
+section {
+    padding: 50p×;
+    text-align: center;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20p×;
+}
+
+#photo {
+    width: 120p× !important; 
+    height: 120p× !important;  
+    object-fit: cover; 
+    display: block;
+    border-radius: 50%;
+    margin: 20p× auto;
+}
+
+form {
+    max-width: 600p×;
+    margin: 30p× auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15p×;
+}
+
+label {
+    display: black;
+    margin-top: 15p×;
+} 
+
+input, textarea {
+    padding: 10p×;
+    font-size: 16p×;
+}
+
+button {
+    background: #0d6efd;
+    color: white;
+    border: none;
+    padding: 10p×;
+    cursor: pointer;
+}
+
+input, textarea {
+    border: 1p× solid #ccc;
+    border-radius: 8p×;
+    outline: none;
+}
+
+input: focus, textarea: focus {
+    border-color: #0d6efd;
+}
+
+button: hover {
+    background: #084298;
+
+}
+
+#apropos {
+    text-align: center;
+    padding: 50p× 20p×;
+}
+
+#apropos p {
+    max-width: 700p×;
+    margin: 30p× auto;
+    font-size; 18p×;
+    line-height: 1.6;
+}
+
+/* Adaptation pour
+telephone */
+@media (max-width: 600p×)
+{
+
+    header {
+        flex-direction: column;
+        padding: 15p×;
+    }
+
+    nav a {
+        margin: 8p×;
+    }
+
+    .hero {
+        padding: 50p× 15p×;
+    }
+
+    #apropos {
+        padding: 30p× 15p×;
+    }
+
+    #photo {
+        width: 100p× !important;
+        height: 100p× !mportant; 
+        margin: 20p× auto;
+    }
+
+    form {
+        width: 90%;
+        max-width: none;
+        margin: 20p× auto;
+    }
+
+    input, textarea, button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        min-height: 120p×;
+    }
+
+    .hero h1 {
+        font-size: 28p×;
+    }
+
+    .hero p {
+        font-size: 16p×;
+    }
+
+    #apropos p {
+        font-size: 16p×;
+    }
+
+    footer {
+        font-size: 14p×;
+    }
+}
