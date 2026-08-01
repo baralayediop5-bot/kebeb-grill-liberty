@@ -64,26 +64,28 @@ professioneles.
     <h2>contactez-moi</h2>
 
 <form>
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required>
 
-    <label for="nom">Nom :</
-label>
-    <input type="text" id="nom" 
-name="nom" required>
+    <label for="email">E-mail :</label>
+    <input type="email" id="email" name="email" required>
 
-    <label for="email">E-mail :</
-label>
-    <input type="email"
-id="email" name="email" required>
+    <label for="telephone">Téléphone :</label>
+    <input type="tel" id="telephone" name="telephone" required>
 
-    <label
-for="message">Message :</label>
-    <textarea id="message"
-name="message" rows="5"
-required></textarea>
+    <label for="date">Date :</label>
+    <input type="date" id="date" name="date" required>
 
-    <button
-type="submit">Envoyer</button>
+    <label for="heure">Heure :</label>
+    <input type="time" id="heure" name="heure" required>
 
+    <label for="personnes">Nombre de personnes :</label>
+    <input type="number" id="personnes" name="personnes" min="1" max="20" required>
+
+    <label for="message">Message (facultatif) :</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit">Réserver ma table 🍽️</button>
 </form>
 </section>
 
