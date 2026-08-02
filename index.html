@@ -102,7 +102,7 @@ professioneles.
 <section id="contact">
     <h2>contactez-moi</h2>
 
-<form>
+<form id="reservationForm>
     <label for="nom">Nom :</label>
     <input type="text" id="nom" name="nom" required>
 
@@ -124,7 +124,7 @@ professioneles.
     <label for="message">Message (facultatif) :</label>
     <textarea id="message" name="message" rows="4"></textarea>
 
-    <button type="submit">Réserver ma table 🍽️</button>
+    <button type="button" id="whatsappBtn">Réserver ma table 🍽️</button>
     <p id="confirmation" style="display: none;">
     ✅ Merci ! Votre demande de réservation a bien été envoyée.
 </p>
@@ -147,6 +147,41 @@ formulaire.addEventListener("submit", function(event) {
     confirmation.style.display = "block";
 
     formulaire.reset();
+});
+</script>
+    <script>
+document.getElementById("whatsappBtn").addEventListener("click", function () {
+    const form = document.getElementById("reservationForm");
+
+    if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+    }
+
+    const nom = document.getElementById("nom").value;
+    const email = document.getElementById("email").value;
+    const telephone = document.getElementById("telephone").value;
+    const date = document.getElementById("date").value;
+    const heure = document.getElementById("heure").value;
+    const personnes = document.getElementById("personnes").value;
+    const message = document.getElementById("message").value;
+
+    const texte =
+`🍽️ NOUVELLE RÉSERVATION
+
+Nom : ${nom}
+E-mail : ${email}
+Téléphone : ${telephone}
+Date : ${date}
+Heure : ${heure}
+Nombre de personnes : ${personnes}
+Message : ${message || "Aucun"}`;
+
+    const numeroWhatsApp = "352691264937";
+
+    const url = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(texte);
+
+    window.open(url, "_blank");
 });
 </script>
 </body>
