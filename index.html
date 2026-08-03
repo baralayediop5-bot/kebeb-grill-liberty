@@ -162,41 +162,8 @@ professioneles.
     © 2026 Bara - Tous droits
 réservés.
 </footer>
-
+    
 <script src="script.js"></script>
-    <script>
-document.getElementById("whatsappBtn").addEventListener("click", function () {
-    const form = document.getElementById("reservation-form");
-
-    if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-    }
-
-    const nom = document.getElementById("nom").value;
-    const email = document.getElementById("email").value;
-    const telephone = document.getElementById("telephone").value;
-    const date = document.getElementById("date").value;
-    const heure = document.getElementById("heure").value;
-    const personnes = document.getElementById("personnes").value;
-    const message = document.getElementById("message").value || "Aucun";
-
-    const texte = `🍽️ NOUVELLE RÉSERVATION
-
-Nom : ${nom}
-E-mail : ${email}
-Téléphone : ${telephone}
-Date : ${date}
-Heure : ${heure}
-Nombre de personnes : ${personnes}
-Message : ${message}`;
-
-    const numeroWhatsApp = "352691264937";
-    const url = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(texte);
-
-    window.location.href = url;
-});
-</script>
 </body>
-</tml>
+</html>
     
