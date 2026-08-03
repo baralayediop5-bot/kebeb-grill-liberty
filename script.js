@@ -46,3 +46,48 @@ Message : ${message}`;
     });
 }
 });
+
+function mettreAJourStatut() {
+    const statut = document.getElementById("statut-ouverture");
+
+    const maintenant = new Date();
+
+    // Jour : 0 = dimanche, 1 = lundi, ..., 6 = samedi
+    const jour = maintenant.getDay();
+
+    const heure = maintenant.getHours();
+    const minutes = maintenant.getMinutes();
+
+    const heureActuelle = heure + minutes / 60;
+
+    let ouverture = 11;
+    let fermeture = 0;
+
+    // Vendredi et samedi : 11h00 → 01h00
+    if (jour === 5 || jour === 6) {
+        fermeture = 25; // 01h00 du lendemain
+    }
+
+    // Pour vendredi/samedi, 00h00 → 01h00 reste ouvert
+    const ouvertApresMinuit =
+        (jour === 6 || jour === 0) && heureActuelle < 1;
+
+    const ouvert =
+        ouvertApresMinuit ||
+        (heureActuelle >= ouverture && (
+            (jour >= 0 && jour <= 4 && heureActuelle < 24) ||
+            ((jour === 5 || jour === 6) && heureActuelle < 25)
+        ));
+
+    if (ouvert) {
+        statut.textContent = "🟢 Ouvert actuellement";
+    } else {
+        statut.textContent = "🔴 Fermé actuellement";
+    }
+}
+
+// Vérifier immédiatement
+mettreAJourStatut();
+
+// Mettre à jour automatiquement chaque minute
+setInterval(mettreAJourStatut, 60000);
