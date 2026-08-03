@@ -1,15 +1,13 @@
-function bonjour() {
-alert("Bonjour Bara ! Merci de visiter mon site.");
-} 
+document.addEventListener("DOMContentLoaded", function () {
 
-const formulaire =
-document.querySelector("form");
+    const formulaire = document.querySelector("#reservation-form");
 
-formulaire.addEventListener("submit", function(event) {
+    formulaire.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-event.preventDefault();
+        alert("Message envoyé !");
 
-    alert("Message envoyes !");
+        formulaire.reset();
+    });
 
-    formulaire.reset();
 });
