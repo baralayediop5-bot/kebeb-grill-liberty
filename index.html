@@ -181,7 +181,7 @@ Message : ${message || "Aucun"}`;
 
     const url = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(texte);
 
-    window.open(url, "_blank");
+    window.location.href =url;
 });
 </script>
 </body>
