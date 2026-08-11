@@ -71,11 +71,10 @@ nav a:hover {
             rgba(0, 0, 0, 0.25),
             rgba(0, 0, 0, 0.25)
         ),
-        url("liberty-dark.jpg") center/cover no-repeat;
+        url("liberty-dark.jpg") center center / cover no-repeat;
 
     color: white;
 }
-
 .restaurant-badge {
     color: #d9a441;
     font-size: 18px;
